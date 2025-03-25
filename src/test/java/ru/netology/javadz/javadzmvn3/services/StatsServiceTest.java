@@ -8,8 +8,7 @@ public class StatsServiceTest {
     @Test
     public void totalSales() {
         StatsService service = new StatsService();
-
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 180;
         int actual = service.totalSales(sales);
@@ -22,7 +21,7 @@ public class StatsServiceTest {
     public void averageSalesMonth() {
         StatsService service = new StatsService();
 
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 15;
         int actual = service.averageSalesMonth(sales);
@@ -34,7 +33,7 @@ public class StatsServiceTest {
     public void maxSales() {
         StatsService services = new StatsService();
 
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 8;
         int actual = services.maxSales(sales);
@@ -46,7 +45,7 @@ public class StatsServiceTest {
     public void minSales() {
         StatsService service = new StatsService();
 
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 9;
         int actual = service.minSales(sales);
@@ -58,7 +57,7 @@ public class StatsServiceTest {
     public void lessAverageSales() {
         StatsService service = new StatsService();
 
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 5;
         int actual = service.lessAverageSales(sales);
@@ -70,12 +69,11 @@ public class StatsServiceTest {
     public void moreAverageSales() {
         StatsService service = new StatsService();
 
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 5;
         int actual = service.moreAverageSales(sales);
 
         Assertions.assertEquals(expected, actual);
     }
-
 }
