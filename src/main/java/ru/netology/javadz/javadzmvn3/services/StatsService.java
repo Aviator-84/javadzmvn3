@@ -2,8 +2,8 @@ package ru.netology.javadz.javadzmvn3.services;
 
 public class StatsService {
 
-    public int totalSales(int[] sales) {
-        int total = 0;
+    public long totalSales(long[] sales) {
+        long total = 0;
 
         for (int i = 0; i < sales.length; i++) {
             total += (int) sales[i];
@@ -11,8 +11,8 @@ public class StatsService {
         return total;
     }
 
-    public int averageSalesMonth(int[] sales) {
-        int sum = 0;
+    public long averageSalesMonth(long[] sales) {
+        long sum = 0;
 
         for (int i = 0; i < sales.length; i++) {
             sum += (int) sales[i];
@@ -20,7 +20,7 @@ public class StatsService {
         return sum / sales.length;
     }
 
-    public int maxSales(int[] sales) {
+    public long maxSales(long[] sales) {
         int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -31,7 +31,7 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public int minSales(int[] sales) {
+    public long minSales(long[] sales) {
         int minMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -42,9 +42,9 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int lessAverageSales(int[] sales) {
-        int averageSalesMonth = averageSalesMonth(sales);
-        int lessSales = 0;
+    public long lessAverageSales(long[] sales) {
+        long averageSalesMonth = averageSalesMonth(sales);
+        long lessSales = 0;
 
         for (int i = 0; i < sales.length; i++) {
             if (averageSalesMonth > sales[i]) {
@@ -54,9 +54,9 @@ public class StatsService {
         return lessSales;
     }
 
-    public int moreAverageSales(int[] sales) {
-        int averageSalesMonth = averageSalesMonth(sales);
-        int moreSales = 0;
+    public long moreAverageSales(long[] sales) {
+        long averageSalesMonth = averageSalesMonth(sales);
+        long moreSales = 0;
 
         for (int i = 0; i < sales.length; i++) {
             if (averageSalesMonth < sales[i]) {
